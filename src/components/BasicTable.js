@@ -10,7 +10,41 @@ const BasicTable = () => {
     columns: columns,
     data: data,
   });
-  return <div></div>;
+
+  const {
+    getTableProps,
+    getTableBodyProps,
+    headerGroups,
+    rows,
+    prepareRow,
+  } = tableInstance;
+  return (
+    <div>
+      <table {...getTableProps}>
+              <thead>
+                  {
+                      headerGroups.map(headerGroup => (
+                          <tr {...headerGroup.getFooterGroupProps()}>
+                              {
+                                  headerGroup.headers.map(column => (
+                                      <th>{column.Header}</th>
+                                  ))
+                              }
+                          </tr>
+                      )
+                  }
+          <tr>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody {...getTableBodyProps}>
+          <tr>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  );
 };
 
 export default BasicTable;
