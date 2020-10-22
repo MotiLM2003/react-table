@@ -1,7 +1,7 @@
-export const CLOUMNS = [
+export const COLUMNS = [
   {
     Header: 'Id',
-    accessor: ' id',
+    accessor: 'id',
   },
   {
     Header: 'First name',
