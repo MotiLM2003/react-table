@@ -3,12 +3,17 @@ table {
   width: 100%;
 }
 
-table th {
+table th,
+table tfoot td {
   background-color: #4caf50;
   color: #fff;
   padding-top: 12px;
   text-align: center;
   padding-left: 12px;
+}
+
+tabe th {
+  position: sticky;
 }
 
 table td,
