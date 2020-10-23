@@ -3,11 +3,12 @@ import BasicTable from './BasicTable';
 
 import '../App.css';
 import SortingTable from './SortingTable';
+import FilteringTable from './FilteringTable';
 
 const App = () => {
   return (
     <div>
-      <SortingTable />
+      <FilteringTable />
     </div>
   );
 };

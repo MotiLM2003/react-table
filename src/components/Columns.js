@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 export const COLUMNS = [
   {
     Header: 'Id',
@@ -13,11 +14,18 @@ export const COLUMNS = [
     Header: 'Last Name',
     Footer: 'Last Name',
     accessor: 'last_name',
+    Cell: ({ value }) => {
+      return `${value}`;
+    },
   },
   {
     Header: 'Date of Birth',
     Footer: 'Date of Birt',
     accessor: 'date_of_birth',
+    Cell: ({ value }) => {
+      console.log(value);
+      return format(new Date(value), ' dd/MM/yyyy');
+    },
   },
   {
     Header: 'Country',
